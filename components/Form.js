@@ -23,18 +23,8 @@ const Form = () => {
 
         console.table(name, email)
 
-        const response = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json'
-            },
-            body: JSON.stringify({
-                access_key: '75b533ac-4059-4ba9-9f12-759e2d1994bc',
-                name: e.target.name.value,
-                email: e.target.email.value,
-                message: e.target.message.value
-            })
+        const response = await fetch('https://submit-form.com/kSFzC1lJ', {
+            method: 'POST'
         })
         const result = await response.json()
         if (result.success) {
